@@ -18,15 +18,15 @@ export const ContactList = ({
         <div
           key={contact.id}
           onClick={() => setSelectedContact(contact)}
-          className={`flex items-start space-x-3 p-3 rounded-xl cursor-pointer transition border ${
+          className={`flex items-start space-x-3 p-3 rounded-lg cursor-pointer transition border ${
             selectedContact?.id === contact.id
-              ? "bg-white/5 border-gray-200/60"
-              : "bg-white/5 border-gray-100/30 hover:bg-white/5"
+              ? "bg-white/5 border-gray-200/30"
+              : "bg-white/5 border-gray-100/10 hover:bg-white/5"
           }`}
         >
-          <Avatar src={contact.avatar} alt={contact.name} size="sm" />
+          <Avatar src={contact.avatar} alt={contact.firstName} size="sm" />
           <div className="flex-1 min-w-0 gap-3">
-            <div className="text-base font-medium text-white">{contact.name}</div>
+            <div className="text-base font-medium text-white">{contact.firstName}</div>
             <div className="text-sm text-white/80 truncate">
               {contact.lastMessage}
             </div>

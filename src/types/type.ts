@@ -15,7 +15,8 @@ export type User = {
 
 export interface Contact {
   id: string;
-  name: string;
+  firstName: string;
+  lastName: string;
   avatar: string;
   lastMessage: string;
   time: string;
